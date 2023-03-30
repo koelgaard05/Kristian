@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!teksten på hjemmesiden>
+        <title>Træning</title>
+        <!icon til hjemmeside>
+            <link rel="shortcut icon" href="pngicon.png" type="image/png">
+</head>
+
+<style>
+    .topnav {
+        /*Det bestemmer positionen af top bjælken*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*Hvor gennemsigtigt bjælken er*/
+        opacity: 70%;
+    }
+
+    body {
+        /*Margin på hele siden*/
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .background-image {
+        /*Billedets url*/
+        background-image: url(https://nielstraining.dk/wp-content/uploads/2017/10/fullbody-tr%C3%A6ningsprogram-til-styrketr%C3%A6ning-e1508493361692.jpeg);
+        /*For billedet til at fylde hele siden*/
+        background-size: cover;
+        /*Det gør så billedet er i midten*/
+        background-position: center;
+        /*Det gør så der kun er et billede*/
+        background-repeat: no-repeat;
+        /*Det gør så at det fylder det hele uanset sidens størelse*/
+        height: 100vh;
+        /*Ingen filter*/
+        filter: none;
+        /*Et flexibel display*/
+        display: flex;
+    }
+
+    ul {
+        /* Stil for punkttegn */
+        list-style-type: disc;
+    }
+
+    .background1 {
+        /*Bestemmer bagrundens position*/
+        position: absolute;
+        bottom: 270px;
+        top: 100px;
+        left: 20px;
+        right: 1100px;
+        /*Bagrundens farve*/
+        background: rgba(255, 255, 255, 0.2);
+        /*Bagrundens skyge*/
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
+        /*Bagrundens radius i hjørnerne*/
+        border-radius: 50px;
+        /*Det gør bagrunden bliver langsomt støre når man er over den*/
+        transition: all 0.5s ease;
+    }
+
+    .liste {
+        /*Bestemmer tekstens position*/
+        position: absolute;
+        top: 90px;
+        left: 50px;
+        right: 1100px;
+        /*Skrift typen*/
+        font-family: serif;
+        /*Skrift størelse*/
+        font-size: 20px;
+        /* Tyk text */
+        font-weight: bold;
+        /*Lige Margin i begge sider*/
+        text-align: justify;
+        /*Sort tekst*/
+        color: ;
+        /*Det gør teksten bliver langsomt støre når man er over den*/
+        transition: all 0.5s ease;
+        /*Det gør markøren bliver til en pegefinger*/
+        cursor: pointer;
+        /*Det gør så teksten lægger i lag to over bagrunden*/
+        z-index: 2;
+    }
+
+    .liste:hover~.background1 {
+        /*Bagrunden bliver 5% støre*/
+        transform: scale(1.05);
+        backdrop-filter: blur(10px);
+    }
+
+    .liste:hover {
+        /*Skriften bliver 5% støre*/
+        transform: scale(1.05);
+    }
+
+    #copy {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        opacity: 75%;
+    }
+</style>
+
+<body>
+
+    <div class="background-image"></div>
+
+    <div class="topnav">
+        <a href="index.html">Svømning</a>
+        <a href="konkurence.html">Konkurence</a>
+        <a href="træning.html">Træning</a>
+    </div>
+
+    <div class="container2">
+        <!Overskrift og tekst>
+            <div class="liste">
+                <h1>Liste med 10 punkter</h1>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <li>Item 6</li>
+                    <li>Item 7</li>
+                    <li>Item 8</li>
+                    <li>Item 9</li>
+                    <li>Item 10</li>
+                </ul>
+            </div>
+            <!Bagrunden til text1>
+                <div class="background1"></div>
+    </div>
+</body></html>

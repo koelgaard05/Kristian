@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!teksten på hjemmesiden>
+        <title>Konkurence</title>
+        <!icon til hjemmeside>
+            <link rel="shortcut icon" href="pngicon.png" type="image/png">
+</head>
+<style>
+    .topnav {
+        /*Det bestemmer positionen af top bjælken*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*Hvor gennemsigtigt bjælken er*/
+        opacity: 70%;
+    }
+
+    body {
+        /*Margin på hele siden*/
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .background1 {
+        /*Bestemmer bagrundens position*/
+        position: absolute;
+        bottom: 360px;
+        top: 100px;
+        left: 20px;
+        right: 470px;
+        /*Bagrundens farve*/
+        background: rgba(255, 255, 255, 0.2);
+        /*Bagrundens skyge*/
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
+        /*Bagrundens radius i hjørnerne*/
+        border-radius: 50px;
+        /*Det gør bagrunden bliver langsomt støre når man er over den*/
+        transition: all 0.5s ease;
+    }
+
+
+    .background-image {
+        /*Billedets url*/
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Men%27s_4x100M_Medley_Relay_Final.ogv/1200px--Men%27s_4x100M_Medley_Relay_Final.ogv.jpg);
+        /*For billedet til at fylde hele siden*/
+        background-size: cover;
+        /*Det gør så billedet er i midten*/
+        background-position: center;
+        /*Det gør så der kun er et billede*/
+        background-repeat: no-repeat;
+        /*Det gør så at det fylder det hele uanset sidens størelse*/
+        height: 100vh;
+        /*Ingen filter*/
+        filter: none;
+        /*Et flexibel display*/
+        display: flex;
+    }
+
+    .text2 h1 {
+        text-align: center;
+    }
+
+    .text2 {
+        /*Bestemmer tekstens position*/
+        position: absolute;
+        top: 90px;
+        left: 50px;
+        right: 500px;
+        /*Skrift typen*/
+        font-family: serif;
+        /*Skrift størelse*/
+        font-size: 20px;
+        /* Tyk text */
+        font-weight: bold;
+        /*Lige Margin i begge sider*/
+        text-align: justify;
+        /*Sort tekst*/
+        color: ;
+        /*Det gør teksten bliver langsomt støre når man er over den*/
+        transition: all 0.5s ease;
+        /*Det gør markøren bliver til en pegefinger*/
+        cursor: pointer;
+        /*Det gør så teksten lægger i lag to over bagrunden*/
+        z-index: 2;
+    }
+
+    .text2:hover~.background1 {
+        /*Bagrunden bliver 5% støre*/
+        transform: scale(1.05);
+        backdrop-filter: blur(10px);
+    }
+
+    .text1:hover {
+        /*Skriften bliver 5% støre*/
+        transform: scale(1.05);
+    }
+
+    #copy {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        opacity: 75%;
+    }
+
+    .video-container {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        border-radius: 100px;
+        overflow: hidden;
+        border-color: black;
+        border-bottom-style: double;
+    
+    }
+</style>
+
+<body>
+    <div class="background-image"></div>
+
+    <div class="topnav">
+        <a href="index.html">Svømning</a>
+        <a href="konkurence.html">Konkurence</a>
+        <a href="træning.html">Træning</a>
+    </div>
+    <div class="container2">
+        <!Overskrift og tekst>
+            <div class="text2">
+                <h1>Svømmestævne</h1>
+                <p>Et svømmestævne er en begivenhed, hvor svømmere fra forskellige klubber og hold samles for at konkurrere i forskellige svømmediscipliner. Stævnet kan være arrangeret på forskellige niveauer, fra lokale klubstævner til internationale mesterskaber.
+
+                    Typisk består et svømmestævne af en række individuelle løb og holdkapløb i forskellige svømmediscipliner som crawl, rygcrawl, brystsvømning og butterfly. Svømmere konkurrerer mod hinanden i deres respektive alders- og evnegrupper, og resultaterne opsummeres i form af tider og point.
+
+                    Svømmestævner kan være en spændende og udfordrende oplevelse for svømmere, hvor de kan teste deres færdigheder og måle sig selv mod andre dygtige svømmere. Det kan også være en social begivenhed, hvor svømmere møder andre fra forskellige klubber og hold og kan dele deres interesse for sporten.</p>
+            </div>
+            <!Bagrunden til text1>
+                <div class="background1"></div>
+    </div>
+
+    <div class="video-container">
+        <video width="480" height="270" controls>
+            <source src="stævne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body></html>

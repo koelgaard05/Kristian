@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*hvilken farve bjælken har*/
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+/*hvor stor teksten er, hvilken farve den har, og hvor den er*/
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 28px;
+    opacity: 20%;
+}
+
+/*gør teksten og blå, når musen er over*/
+.topnav a:hover {
+    border-bottom: 7px solid blue;
+    color: blue;
+    opacity: 100%;
+
+}
+
+/*Gør bjælken sort når musen er over*/
+.topnav:hover {
+    opacity: 100%;
+}
+
+/*Træning læs mere*/
+.container1 {
+    position: absolute;
+    top: 440px;
+    right: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.background2 {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.img {
+    background: url("https://www.svoem.org/_files/rebecca/nickelsenstartpm.jpg");
+    background-size: 160%;
+    /*Selvom at det er rødt så virker det!*/
+    background-position-x: center;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: background-size 0.5s ease-in-out;
+
+}
+
+.text2 h1 {
+    text-align: center;
+}
+
+.background2 .text2 {
+    position: absolute;
+    /*1 rem er det samme som 16px*/
+    padding: 1rem;
+    bottom: 0;
+    height: 23%;
+    background: rgba(255, 255, 255, 0.2);
+    /*Selvom at det er rødt så virker det!*/
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    transition: height 0.5s ease-in-out;
+}
+
+.text2 .description {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.konkurence-knap {
+    float: right;
+    padding: 0.5rem 1rem;
+    background: #0AA0E2;
+    border: 0;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.konkurence-knap a {
+    font-family: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+.konkurence-knap:hover {
+    background: #098fc8;
+}
+
+.background2:hover .text2 {
+    height: 70%;
+}
+
+.background2:hover .img {
+    background-size: 150%;
+}
+
+.background2:hover .text2 .description {
+    opacity: 1;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!Det gør at man kan bruge æ,ø,å>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <!teksten på hjemmesiden>
+            <title>Svømning</title>
+            <!icon til hjemmeside. rel=fortæller det er et icon. href=fortæller hvad den heder. type=fortæller hvilken fil det er>
+                <link rel="shortcut icon" href="pngicon.png" type="image/png">
+
+                <style>
+                    .topnav {
+                        /*Det bestemmer positionen af top bjælken*/
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        /*Hvor gennemsigtigt bjælken er*/
+                        opacity: 70%;
+                    }
+
+                    body {
+                        /*Margin på hele siden*/
+                        margin-left: 0;
+                        padding: 0;
+                    }
+
+
+                    .background-image {
+                        /*Billedets url*/
+                        background-image: url(https://static01.nyt.com/images/2009/07/30/sports/29swim-600a.jpg?quality=75&auto=webp&disable=upscale);
+                        /*For billedet til at fylde hele siden*/
+                        background-size: cover;
+                        /*Det gør så billedet er i midten*/
+                        background-position: center;
+                        /*Det gør så der kun er et billede*/
+                        background-repeat: no-repeat;
+                        /*Det gør så at det fylder det hele uanset sidens størelse*/
+                        height: 100vh;
+                        /*Ingen filter*/
+                        filter: none;
+                        /*Et flexibel display*/
+                        display: flex;
+                    }
+
+                    .background1 {
+                        /*Bestemmer bagrundens position*/
+                        position: absolute;
+                        bottom: 270px;
+                        top: 100px;
+                        left: 20px;
+                        right: 970px;
+                        /*Bagrundens farve*/
+                        background: rgba(255, 255, 255, 0.2);
+                        /*Bagrundens skyge*/
+                        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
+                        /*Bagrundens radius i hjørnerne*/
+                        border-radius: 50px;
+                        /*Det gør bagrunden bliver langsomt støre når man er over den*/
+                        transition: all 0.5s ease;
+                    }
+
+                    .text1 h1 {
+                        text-align: center;
+                    }
+
+                    .text1 {
+                        /*Bestemmer tekstens position*/
+                        position: absolute;
+                        top: 90px;
+                        left: 50px;
+                        right: 1000px;
+                        /*Skrift typen*/
+                        font-family: serif;
+                        /*Skrift størelse*/
+                        font-size: 20px;
+                        /* Tyk text */
+                        font-weight: bold;
+                        /*Lige Margin i begge sider*/
+                        text-align: justify;
+                        /*Sort tekst*/
+                        color: ;
+                        /*Det gør teksten bliver langsomt støre når man er over den*/
+                        transition: all 0.5s ease;
+                        /*Det gør markøren bliver til en pegefinger*/
+                        cursor: pointer;
+                        /*Det gør så teksten lægger i lag to over bagrunden*/
+                        z-index: 2;
+                    }
+
+                    .text1:hover~.background1 {
+                        /*Bagrunden bliver 5% støre*/
+                        transform: scale(1.05);
+                        backdrop-filter: blur(10px);
+                    }
+
+                    .text1:hover {
+                        /*Skriften bliver 5% støre*/
+                        transform: scale(1.05);
+                    }
+
+                    #copy {
+                        position: absolute;
+                        bottom: 0px;
+                        left: 10px;
+                        opacity: 75%;
+                    }
+                </style>
+</head>
+
+<body>
+    <!Div klasse til baggrunds billedet>
+        <div class="background-image"></div>
+        <!Div klasse til alle linksne i bjælken i topen>
+            <div class="topnav">
+                <a href="index.html">Svømning</a>
+                <a href="konkurence.html">Konkurence</a>
+                <a href="træning.html">Træning</a>
+            </div>
+            <!Div klasse der samler text1 og background 1, så div klasserne bliver søskende>
+                <div class="container">
+                    <!Overskrift og tekst>
+                        <div class="text1">
+                            <h1>Om svømning</h1>
+                            <p>Svømning er en fantastisk sport, som tilbyder en lang række sundhedsmæssige fordele. Det er en lav-impact sport, som belaster leddene mindre end f.eks. løb og kan være en god måde at træne hele kroppen på. Svømning kan forbedre kardiovaskulær sundhed, styrke muskler, øge fleksibilitet og forbedre vejrtrækningsteknikker. Derudover kan det også være en sjov og social sport, som kan dyrkes på alle niveauer, fra begyndere til elite-udøvere. Svømning er også en sport, som kan praktiseres hele året rundt, og som kan give dig mulighed for at træne både indendørs og udendørs, afhængigt af sæsonen og vejrforholdene.</p>
+                        </div>
+                        <!Bagrunden til text1>
+                            <div class="background1"></div>
+                </div>
+                <!Div klasse der samler>
+                    <div class="container1">
+                        <!Bagrunden til teksten og linket>
+                            <div class="background2">
+                                <!Img-container til at få billedet til at have samme status som tekst og bagrund>
+                                    <div class="img-container">
+                                        <!Konkurence billedet>
+                                            <div class="img"></div>
+                                    </div>
+                                    <!Div klasse der står for alt tekst i text2>
+                                        <div class="text2">
+                                            <h1>Konkurrencegenet</h1>
+                                            <p class="description">
+                                                Et svømmestævne er en begivenhed, hvor svømmere fra forskellige klubber og hold samles for at konkurrere i forskellige svømmediscipliner. Stævnet kan være arrangeret på forskellige niveauer, fra lokale klubstævner til internationale mesterskaber.
+                                            </p>
+                                            <!Vis jeg klikker på læs mere eller den blå bagrund kommer jeg til konkurence siden>
+                                                <a href="konkurence.html">
+                                                    <button class="konkurence-knap">Læs mere!</button></a>
+                                        </div>
+                            </div>
+                    </div>
+                    <p id="copy">&copy;Kristian Ølgaard, Rasmus Boye Lykke</p>
+</body></html>
